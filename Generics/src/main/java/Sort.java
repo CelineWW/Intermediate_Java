@@ -26,17 +26,18 @@ public class Sort {
         sort(intArray);
 
         // Display the sorted Array
-        System.out.println("The sorted numbers are:");
+        System.out.print("The sorted numbers are:");
         for (int i = 0; i < 10; i++) {
             System.out.print(intArray.get(i) + " ");
         }
     }
 
+    // The method of sort an ArrayList of generic type comparable E
     public static <E extends Comparable<E>> void sort(ArrayList<E> list) {
         sort(list, 0);
     }
 
-    // Helper method
+    // Helper method that override the sort method above
     public static <E extends Comparable<E>> void sort(ArrayList<E> list, int start) {
         // Base case: if start reaches the last element, sort ends
         if (start >= list.size() - 1) {
